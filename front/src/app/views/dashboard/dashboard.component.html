@@ -1,0 +1,108 @@
+<app-widgets-dropdown></app-widgets-dropdown>
+<c-card class="mb-4">
+  <c-card-body>
+    <c-row>
+      <c-col sm="5">
+        <h4 class="card-title mb-0" id="traffic">Lista</h4>
+        <div class="small text-medium-emphasis">Lista de Productos</div>
+      </c-col>
+      <c-col class="d-none d-md-block" sm="7">
+        <table cTable>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Fecha Ingreso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let producto of productos; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ producto.Nombre }}</td>
+              <td>{{ producto.Precio }}</td>
+              <td>{{ producto.Cantidad }}</td>
+              <td>{{ producto.FechaIngreso }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </c-col>
+    </c-row>
+
+  </c-card-body>
+  <c-card class="mb-4">
+    <c-card-body>
+      <c-row>
+        <c-col sm="5">
+          <h4 class="card-title mb-0" id="traffic">Lista</h4>
+          <div class="small text-medium-emphasis">Lista de Proveedores</div>
+        </c-col>
+        <c-col class="d-none d-md-block" sm="7">
+          <table cTable>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo</th>
+             
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let proveedor of proveedores; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ proveedor.Nombres }}</td>
+                <td>{{ proveedor.Telefono }}</td>
+                <td>{{ proveedor.Correo }}</td>
+        
+              </tr>
+            </tbody>
+          </table>
+        </c-col>
+        
+      </c-row>
+    </c-card-body>
+  </c-card>
+  
+  <c-card class="mb-4">
+    <c-card-body>
+      <c-row>
+        <c-col sm="5">
+          <h4 class="card-title mb-0" id="traffic">Lista</h4>
+          <div class="small text-medium-emphasis">Lista de Stock</div>
+        </c-col>
+        <c-col class="d-none d-md-block" sm="7">
+          <table cTable>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">ProductoId</th>
+                <th scope="col">ProveedorId</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio_Venta</th>
+             
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let stock of stocks; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ stock.ProductoId }}</td>
+                <td>{{ stock.ProveedorId }}</td>
+                <td>{{ stock.Cantidad }}</td>
+                <td>{{ stock.Precio_Venta }}</td>
+        
+              </tr>
+            </tbody>
+          </table>
+        </c-col>
+        
+      </c-row>
+    </c-card-body>
+  </c-card>
+
+
+  
+  
+
+</c-card>
